@@ -17,6 +17,17 @@ LOW_CMD_LENGTH = 610
 LOW_STATE_LENGTH = 771
 
 def jointLinearInterpolation(initPos, targetPos, rate):
+    """Performs joint linear interpolation between initial and target positions.
+    Args:
+        initPos: Initial position
+        targetPos: Target position
+        rate: Interpolation rate between 0-1
+    Returns:
+        p: Interpolated position
+    - Calculates interpolation rate bound between 0-1
+    - Performs linear interpolation between initial and target positions based on rate
+    - Returns interpolated position"""
+    
 
     #rate = np.fmin(np.fmax(rate, 0.0), 1.0)
     if rate > 1.0:
